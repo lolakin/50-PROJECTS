@@ -1,0 +1,91 @@
+body{
+    background-color: rgb(5, 48, 48);
+    color: aliceblue;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading{
+    margin-bottom: 30px;
+    font-size: 3rem;
+    color: aliceblue;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+}
+
+.timer, .errors, .accuracy, .cpm, .wpm{
+    background-color: black;
+    height: 70px;
+    width: 90px;
+    margin: 8px;
+    padding: 12px;
+    border-radius: 20%;
+    box-shadow: black 5px 8px 5px;
+}
+
+.cpm, .wpm  {
+    display: none;
+  }
+
+
+  .header_text{
+    text-transform: uppercase;
+    font-size: 0.2rem;
+    font-weight: 600;
+  }
+  
+  .curr_time, .curr_errors, .curr_accuracy, .curr_cpm, .curr_wpm {
+    margin-top: 2px;
+    font-size: 2rem;
+  }
+
+  .quote{
+    background-color: aliceblue;
+    font-size: 1.5rem;
+     margin-top: 10px;
+    color: black;
+    margin: 10px;
+    padding: 25px;
+    box-shadow: black 5px 8px 5px;
+  }
+
+  .input_area{
+    background-color: aliceblue;
+    height: 80px;
+    width: 40%;
+    font-size: 1.5rem;
+     margin-top: 30px;
+    font-weight: 600;
+    margin: 15px;
+    padding: 20px;
+    border: 0px;
+    box-shadow: black 5px 8px 5px;
+  }
+
+
+  .restart_btn{
+    display: none;
+    background-color: black;
+    font-size: 1.5rem;
+    padding: 10px;
+    border: 0px;
+    box-shadow: black 5px 8px 5px;
+    color: aliceblue;
+  }
+  
+  .incorrect_char {
+    color: red;
+    text-decoration: underline;
+  }
+   
+  .correct_char {
+    color: darkgreen;
+  }
