@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculator</h1>
+    <div class="container">
+        <div class="textview">
+            <p id="resultbox">0</p>
+          </div>
+          
+            <div class="buttons">
+                <table>
+                    <tr>
+                            <td><input class="button allclearButton" type="button" value="AC"></td>
+                            <td><input class="button action-button backspace" type="button" value="MC"></td>
+                            <td><input class="button calc-action-button" type="button" value="/" ></td>
+                            <td><input class="button calc-action-button" type="button" value="X"></td>
+                    </tr>
+                    <tr>
+                            <td><input class="button num-button" type="button" value="7"></td>
+                            <td><input class="button num-button" type="button" value="8"></td>
+                            <td><input class="button num-button" type="button" value="9"></td>
+                            <td><input class="button calc-action-button" type="button" value="-"></td>
+                     </tr>
+                     <tr>
+                            <td><input class="button num-button"  type="button" value="4"></td>
+                            <td><input class="button num-button" type="button" value="5"></td>
+                            <td><input class="button num-button" type="button" value="6"></td>
+                            <td><input class="button calc-action-button" type="button" value="+"></td>
+                    </tr>
+                     <tr>
+                            <td><input class="button num-button" type="button" value="1"></td>
+                            <td><input class="button num-button" type="button" value="2"></td>
+                            <td><input class="button num-button" type="button" value="3"></td>
+                            <td rowspan="5"><input class="button equalButton" type="button" value="="></td>
+                  </tr>
+                    <tr>
+                            <td><input class="button calc-action-button" type="button" value="%"></td>
+                            <td><input class="button num-button" type="button" value="0"></td>
+                            <td><input class="button num-button" type="button" value="."></td>
+                            
+                    </tr>
+    
+                </table>
+            </div>
+    </div>
+    <script src="script.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js'></script>
+</body>
+</html>
