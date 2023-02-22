@@ -397,7 +397,7 @@ form textarea {
   }
   header .navbar {
     position: absolute;
-    top: -500px;
+    top: -800px;
     left: 0;
     right: 0;
     display: flex;
