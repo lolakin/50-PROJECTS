@@ -1,0 +1,25 @@
+.chat-fc-form-outer div.fc-form ul li {
+    margin-bottom: 25px !important;
+}
+    .chat-fc-form-outer div.fc-form ul li label {
+        margin-left: 0px !important;
+        top: -21px !important;
+        padding-left: 0 !important;
+        font-size: 13px !important;
+        line-height: 20px !important;
+    }
+li.pre-fc-field select {
+    border-radius: 3px!important;
+}
+.pre-fc-error {
+    text-align: left!important;
+    font-size: 11px!important;
+    margin-top: 2px!important;
+}
+.chat-fc-form-outer div.fc-form ul li input {
+    padding: 8px 8px!important;
+}
+.chat-fc-form-outer div.fc-form a.fc-button {
+    padding: 10px 0 !important;
+    line-height: 15px !important;
+}

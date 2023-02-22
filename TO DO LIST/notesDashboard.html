@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Notes Dashboard </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel = "stylesheet" href = 'notes_styles.css'>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel = "stylesheet" href = 'Notes.css'>
+</head>
+<body>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="page-content container note-has-grid">
+    <ul class="nav nav-pills p-3 bg-white mb-3 rounded-pill align-items-center">
+        <li class="nav-item">
+            <a href="javascript:void(0)" class="nav-link rounded-pill note-link d-flex align-items-center px-2 px-md-3 mr-0 mr-md-2 active" id="all-category">
+                <i class="icon-layers mr-1"></i><span class="d-none d-md-block">All Notes</span>
+            </a>
+        </li>
+        
+        <li class="nav-item">
+            <a href="javascript:void(0)" class="nav-link rounded-pill note-link d-flex align-items-center px-2 px-md-3 mr-0 mr-md-2" id="note-important"> <i class="icon-tag mr-1"></i><span class="d-none d-md-block">Important</span></a>
+        </li>
+        <li class="nav-item ml-auto">
+            <a href="javascript:void(0)" class="nav-link btn-primary rounded-pill d-flex align-items-center px-3" id="add-notes"> <i class="icon-note m-0"></i><h5><span class="d-none d-md-block font-14"> + </span></h5></a>
+        </li>
+        &nbsp;&nbsp;&nbsp;
+
+        <!--- LOG OUT BUTTON STARTS --->
+        <li class="nav-item">
+            <a href="index.html" style="text-decoration:none;" onMouseOver="this.style.color='#E32636'" onMouseOut="this.style.color='red'"> <i class="icon-tag mr-1"></i><span class="d-none d-md-block" style = "margin-bottom: 25px; margin-right: 20px; margin-left: 15px;" id = "logout">Sign Out</span></a>
+        </li>
+        <!--- LOG OUT BUTTON ENDS --->
+
+    </ul>
+    <div class="tab-content bg-transparent">
+        <div id="note-full-container" class="note-has-grid row">
+            
+            <div class="col-md-4 single-note-item all-category note-important" style="">
+                <div class="card card-body">
+                    <span class="side-stick"></span>
+                    <h5 class="note-title text-truncate w-75 mb-0" data-noteheading="Go for lunch">JAVA PROJECT 1<i class="point fa fa-circle ml-1 font-10"></i></h5>
+                    <p class="note-date font-12 text-muted">19 November 2021</p>
+                    <div class="note-content">
+                        <p>1. Tic-Tac-Toe</p>
+                        <p>2. Calculator</p>
+                        <p>3. Hotel Management GUI</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <span class="mr-1"><i class="fa fa-star favourite-note"></i></span>
+                        <span class="mr-1"><i class="fa fa-trash remove-note"></i></span>
+                        <div class="ml-auto">
+                            <div class="category-selector btn-group">
+                                <a class="nav-link dropdown-toggle category-dropdown label-group p-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">
+                                    <div class="category">
+                                        <div class="category-important"></div>
+                                        <span class="more-options text-dark"><i class="icon-options-vertical"></i></span>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right category-menu">
+                                    
+                                    <a class="note-important badge-group-item badge-important dropdown-item position-relative category-important text-danger" href="javascript:void(0);">
+                                        <i class="mdi mdi-checkbox-blank-circle-outline mr-1"></i> Important
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 single-note-item all-category note-important" style="">
+                <div class="card card-body">
+                    <span class="side-stick"></span>
+                    <h5 class="note-title text-truncate w-75 mb-0" data-noteheading="Go for lunch">Movie Night Suggestions<i class="point fa fa-circle ml-1 font-10"></i></h5>
+                    <p class="note-date font-12 text-muted">26 Dec 2021</p>
+                    <div class="note-content">
+                        <p>1. Avengers Endgame</p>
+                        <p>2. Fifty Shades of Grey</p>
+                        <p>3. Batman: The dark knight</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <span class="mr-1"><i class="fa fa-star favourite-note"></i></span>
+                        <span class="mr-1"><i class="fa fa-trash remove-note"></i></span>
+                        <div class="ml-auto">
+                            <div class="category-selector btn-group">
+                                <a class="nav-link dropdown-toggle category-dropdown label-group p-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">
+                                    <div class="category">
+                                        <div class="category-important"></div>
+                                        <span class="more-options text-dark"><i class="icon-options-vertical"></i></span>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right category-menu">
+                                    <a class="note-important badge-group-item badge-important dropdown-item position-relative category-important text-danger" href="javascript:void(0);">
+                                        <i class="mdi mdi-checkbox-blank-circle-outline mr-1"></i> Important
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    <!-- Modal Add notes -->
+    <div class="modal fade" id="addnotesmodal" tabindex="-1" role="dialog" aria-labelledby="addnotesmodalTitle" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content border-0">
+                <div class="modal-header bg-info text-white">
+                    <h5 class="modal-title text-white">Add Notes</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">X</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="notes-box">
+                        <div class="notes-content">
+                            <form action="javascript:void(0);" id="addnotesmodalTitle">
+                                <div class="row">
+                                    <div class="col-md-12 mb-3">
+                                        <div class="note-title">
+                                            <label>Note Title</label>
+                                            <input type="text" id="note-has-title" class="form-control" minlength="25" placeholder="Title" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="note-description">
+                                            <label>Note Description</label>
+                                            <textarea id="note-has-description" class="form-control" minlength="60" placeholder="Description" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="btn-n-save" class="float-left btn btn-success" style="display: none;">Save</button>
+                    <button class="btn btn-danger" data-dismiss="modal">Discard</button>
+                    <button id="btn-n-add" class="btn btn-info" disabled="disabled">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="notes.js"></script>
+</body>
+</html>
