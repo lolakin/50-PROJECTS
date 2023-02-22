@@ -229,7 +229,7 @@ span {
   width: 70%;
 }
 .java-bar {
-  width: 70%;
+  width: 78%;
 }
 .services-content {
   display: grid;
@@ -458,6 +458,7 @@ form textarea {
     margin-left: 25%;
   }
 }
+
 @media (max-width: 340px) {
   :root {
     --big-font: 1.7rem;
